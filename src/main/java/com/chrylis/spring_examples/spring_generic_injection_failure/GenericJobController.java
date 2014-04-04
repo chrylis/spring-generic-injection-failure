@@ -24,7 +24,7 @@ import com.chrylis.spring_examples.spring_generic_injection_failure.service.JobS
 @Profile("generic")
 public class GenericJobController<JS extends JobStatus> {
 	@Autowired
-	private JobStatusService<JS> jobService;
+	protected JobStatusService<JS> jobService;
 	
 	@RequestMapping("/{id}")
 	public JobStatus getJob(@PathVariable String id) {
